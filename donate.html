@@ -1,0 +1,115 @@
+<!--
+  Donate page.
+  Non-obvious note: this static page is ready for a compliant payment processor.
+  Connect the form action to an approved service before processing contributions.
+-->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Donate | Isaac Sharief for President</title>
+    <meta name="description" content="Support Isaac Sharief and American Vanguard with a campaign pledge.">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Isaac Sharief for President home">
+        <img class="brand-mark" src="assets/av-eagle.png" alt="" aria-hidden="true">
+        <span><strong>Isaac Sharief</strong><small>American Vanguard</small></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><span>Menu</span></button>
+      <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="issues.html">Issues</a>
+        <a href="events.html">Events</a>
+        <a href="news.html">News</a>
+        <a class="nav-donate" href="donate.html" aria-current="page">Donate</a>
+        <a class="nav-join" href="volunteer.html">Volunteer</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="page-hero donate-hero">
+        <p class="eyebrow">Donate</p>
+        <h1>Help build the campaign for American strength.</h1>
+        <p>
+          Contributions support voter outreach, campaign materials, events,
+          digital communications, and the organizing work needed to make the
+          case for American Vanguard.
+        </p>
+      </section>
+
+      <section class="section donate-layout" aria-labelledby="donate-title">
+        <form class="donate-panel" data-form="donation">
+          <h2 id="donate-title">Choose a pledge</h2>
+          <div class="amount-grid" role="group" aria-label="Donation amount">
+            <button type="button" class="amount-button is-selected" data-amount="5">$5</button>
+            <button type="button" class="amount-button" data-amount="10">$10</button>
+            <button type="button" class="amount-button" data-amount="25">$25</button>
+            <button type="button" class="amount-button" data-amount="50">$50</button>
+          </div>
+          <input type="hidden" name="amount" id="selected-amount" value="5">
+          <label>
+            <span>Name</span>
+            <input name="name" autocomplete="name" required>
+          </label>
+          <label>
+            <span>Email</span>
+            <input type="email" name="email" autocomplete="email" required>
+          </label>
+          <label>
+            <span>ZIP</span>
+            <input name="zip" inputmode="numeric" autocomplete="postal-code" required>
+          </label>
+          <label class="checkbox-line">
+            <input type="checkbox" name="recurring" checked>
+            <span>Make this a recurring monthly pledge.</span>
+          </label>
+          <label class="checkbox-line">
+            <input type="checkbox" name="eligible" required>
+            <span>I certify that I am eligible to contribute under applicable campaign rules.</span>
+          </label>
+          <button class="button button-primary" type="submit">Continue Contribution</button>
+          <p class="form-status" role="status" aria-live="polite"></p>
+          <p class="processor-note">Secure card, wallet, and receipt processing should be connected through an approved processor.</p>
+        </form>
+
+        <aside class="funds-panel" aria-labelledby="funds-title">
+          <p class="eyebrow">Where it goes</p>
+          <h2 id="funds-title">Tiny budget. Real discipline.</h2>
+          <p>
+            Every contribution helps fund direct voter contact and clear
+            communication about the American Vanguard platform.
+          </p>
+          <div class="progress-wrap">
+            <div class="progress-label"><span>Organizing goal</span><strong>$13,500 / $25,000</strong></div>
+            <div class="progress-bar" aria-label="Organizing goal progress"><span style="width:54%"></span></div>
+          </div>
+          <ul class="check-list">
+            <li>Voter outreach materials</li>
+            <li>Campaign events</li>
+            <li>Volunteer organizing</li>
+            <li>Digital communications</li>
+          </ul>
+          <p class="disclaimer boxed">Paid for by Sharief for President and authorized by Isaac Sharief.</p>
+        </aside>
+      </section>
+    </main>
+
+    <aside class="sticky-cta" aria-label="Campaign quick actions">
+      <span>Help create change.</span>
+      <a href="volunteer.html">Volunteer</a>
+      <a href="donate.html">Donate</a>
+    </aside>
+
+    <footer class="site-footer">
+      <div><strong>Isaac Sharief</strong><p>American Vanguard: lead abroad, build at home.</p></div>
+      <nav aria-label="Footer navigation"><a href="privacy.html">Privacy</a><a href="voter-resources.html">Voter Resources</a><a href="donate.html">Donate</a></nav>
+      <p class="disclaimer">Paid for by Sharief for President and authorized by Isaac Sharief.</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

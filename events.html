@@ -1,0 +1,120 @@
+<!--
+  Events page.
+  Non-obvious note: event RSVPs are saved in the visitor's browser because
+  GitHub Pages cannot run a server. Hook the same form fields to a real form
+  service later if the campaign needs central records.
+-->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Events | Isaac Sharief for President</title>
+    <meta name="description" content="Campaign events, RSVPs, reminders, and volunteer gatherings for Isaac Sharief.">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Isaac Sharief for President home">
+        <img class="brand-mark" src="assets/av-eagle.png" alt="" aria-hidden="true">
+        <span><strong>Isaac Sharief</strong><small>American Vanguard</small></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><span>Menu</span></button>
+      <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="issues.html">Issues</a>
+        <a href="events.html" aria-current="page">Events</a>
+        <a href="news.html">News</a>
+        <a class="nav-donate" href="donate.html">Donate</a>
+        <a class="nav-join" href="volunteer.html">Volunteer</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="page-hero">
+        <p class="eyebrow">Events</p>
+        <h1>Join the campaign on the ground.</h1>
+        <p>
+          Meet the team, hear the platform, ask questions, and help build support
+          for American Vanguard.
+        </p>
+      </section>
+
+      <section class="section events-layout" aria-labelledby="calendar-title">
+        <div class="calendar-card">
+          <p class="section-kicker">June 2026</p>
+          <h2 id="calendar-title">Campaign Calendar</h2>
+          <div class="mini-calendar" aria-label="June campaign dates">
+            <span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span>
+            <b></b><b>1</b><b>2</b><b class="has-event">3</b><b>4</b><b class="has-event">5</b><b>6</b>
+            <b>7</b><b>8</b><b>9</b><b>10</b><b>11</b><b>12</b><b>13</b>
+            <b>14</b><b>15</b><b>16</b><b>17</b><b>18</b><b>19</b><b>20</b>
+            <b>21</b><b>22</b><b>23</b><b>24</b><b>25</b><b>26</b><b>27</b>
+            <b>28</b><b>29</b><b>30</b>
+          </div>
+        </div>
+
+        <div class="event-list">
+          <article class="event-card" data-event-title="Stump Speeches" data-event-date="2026-06-03" data-event-time="12:00" data-event-location="Campaign Headquarters">
+            <time datetime="2026-06-03">Wednesday, June 3</time>
+            <h2>Stump Speeches</h2>
+            <p>Campaign Headquarters.</p>
+            <button class="button button-primary rsvp-button" type="button">RSVP</button>
+          </article>
+          <article class="event-card" data-event-title="Election Day" data-event-date="2026-06-05" data-event-time="12:00" data-event-location="Polling locations">
+            <time datetime="2026-06-05">Friday, June 5</time>
+            <h2>Election Day</h2>
+            <p>Polling locations.</p>
+            <button class="button button-primary rsvp-button" type="button">RSVP</button>
+          </article>
+        </div>
+      </section>
+
+      <dialog class="rsvp-dialog" id="rsvp-dialog" aria-labelledby="rsvp-title">
+        <form method="dialog" class="dialog-shell" data-form="event-rsvp">
+          <button class="dialog-close" value="cancel" aria-label="Close RSVP form">×</button>
+          <p class="eyebrow">RSVP</p>
+          <h2 id="rsvp-title">Campaign Event</h2>
+          <p id="rsvp-meta" class="muted"></p>
+          <input type="hidden" name="eventTitle" id="rsvp-event-title">
+          <input type="hidden" name="eventDate" id="rsvp-event-date">
+          <input type="hidden" name="eventLocation" id="rsvp-event-location">
+          <label>
+            <span>Name</span>
+            <input name="name" autocomplete="name" required>
+          </label>
+          <label>
+            <span>Email</span>
+            <input type="email" name="email" autocomplete="email" required>
+          </label>
+          <label class="checkbox-line">
+            <input type="checkbox" name="friend">
+            <span>I may bring a guest.</span>
+          </label>
+          <label class="checkbox-line">
+            <input type="checkbox" name="reminder">
+            <span>Send me a reminder.</span>
+          </label>
+          <button class="button button-primary" type="submit">Save RSVP</button>
+          <button class="button button-secondary download-ics" type="button">Add to Calendar</button>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </dialog>
+    </main>
+
+    <aside class="sticky-cta" aria-label="Campaign quick actions">
+      <span>Help create change.</span>
+      <a href="volunteer.html">Volunteer</a>
+      <a href="donate.html">Donate</a>
+    </aside>
+
+    <footer class="site-footer">
+      <div><strong>Isaac Sharief</strong><p>American Vanguard: lead abroad, build at home.</p></div>
+      <nav aria-label="Footer navigation"><a href="privacy.html">Privacy</a><a href="voter-resources.html">Voter Resources</a><a href="donate.html">Donate</a></nav>
+      <p class="disclaimer">Paid for by Sharief for President and authorized by Isaac Sharief.</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,125 @@
+<!--
+  Volunteer page.
+  Non-obvious note: role selection happens before the three-field signup so the
+  form stays short while still matching people to useful campaign work.
+-->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Volunteer | Isaac Sharief for President</title>
+    <meta name="description" content="Volunteer for Isaac Sharief and American Vanguard.">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Isaac Sharief for President home">
+        <img class="brand-mark" src="assets/av-eagle.png" alt="" aria-hidden="true">
+        <span><strong>Isaac Sharief</strong><small>American Vanguard</small></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><span>Menu</span></button>
+      <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="issues.html">Issues</a>
+        <a href="events.html">Events</a>
+        <a href="news.html">News</a>
+        <a class="nav-donate" href="donate.html">Donate</a>
+        <a class="nav-join" href="volunteer.html" aria-current="page">Volunteer</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="page-hero">
+        <p class="eyebrow">Volunteer</p>
+        <h1>Campaigns are won by people who actually show up.</h1>
+        <p>
+          Pick a role, leave your contact information, and the campaign will
+          connect you with the team that fits your interests.
+        </p>
+      </section>
+
+      <section class="section volunteer-layout" aria-labelledby="roles-title">
+        <div>
+          <h2 id="roles-title">Choose your lane</h2>
+          <div class="role-grid" role="list">
+            <button class="role-card is-selected" type="button" data-role="Voter outreach" role="listitem">
+              <strong>Voter outreach</strong>
+              <span>Talk to undecided voters and answer the core questions clearly.</span>
+            </button>
+            <button class="role-card" type="button" data-role="Debate prep" role="listitem">
+              <strong>Debate prep</strong>
+              <span>Sharpen contrasts with LIVE and the Progressive Independents.</span>
+            </button>
+            <button class="role-card" type="button" data-role="Digital clips" role="listitem">
+              <strong>Digital clips</strong>
+              <span>Turn the campaign's message into clear, shareable updates.</span>
+            </button>
+            <button class="role-card" type="button" data-role="Event crew" role="listitem">
+              <strong>Event crew</strong>
+              <span>Support event logistics, RSVP lists, and volunteer check-in.</span>
+            </button>
+          </div>
+        </div>
+
+        <form class="signup-panel" data-form="volunteer">
+          <p class="eyebrow">Join the Team</p>
+          <h2>Your volunteer match</h2>
+          <input type="hidden" name="role" id="selected-role" value="Voter outreach">
+          <p class="selected-role-text">Selected role: <strong>Voter outreach</strong></p>
+          <label>
+            <span>Name</span>
+            <input name="name" autocomplete="name" required>
+          </label>
+          <label>
+            <span>Email</span>
+            <input type="email" name="email" autocomplete="email" required>
+          </label>
+          <label>
+            <span>ZIP</span>
+            <input name="zip" inputmode="numeric" autocomplete="postal-code" required>
+          </label>
+          <label class="checkbox-line">
+            <input type="checkbox" name="sms">
+            <span>Text me campaign reminders.</span>
+          </label>
+          <button class="button button-primary" type="submit">Volunteer</button>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <section class="section organizer-strip" aria-labelledby="organizers-title">
+        <h2 id="organizers-title">Grassroots tools</h2>
+        <div class="values-row">
+          <article>
+            <h3>Host a discussion</h3>
+            <p>Invite supporters, review the platform, and send questions back to the campaign.</p>
+          </article>
+          <article>
+            <h3>Host a mini-event</h3>
+            <p>Use the Events page format: time, place, issue focus, and RSVP contact.</p>
+          </article>
+          <article>
+            <h3>Share the contrast</h3>
+            <p>Use competitor quotes carefully and accurately. Exact words matter.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <aside class="sticky-cta" aria-label="Campaign quick actions">
+      <span>Help create change.</span>
+      <a href="volunteer.html">Volunteer</a>
+      <a href="donate.html">Donate</a>
+    </aside>
+
+    <footer class="site-footer">
+      <div><strong>Isaac Sharief</strong><p>American Vanguard: lead abroad, build at home.</p></div>
+      <nav aria-label="Footer navigation"><a href="privacy.html">Privacy</a><a href="voter-resources.html">Voter Resources</a><a href="donate.html">Donate</a></nav>
+      <p class="disclaimer">Paid for by Sharief for President and authorized by Isaac Sharief.</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
