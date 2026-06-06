@@ -1,8 +1,4 @@
-/*
-  American Vanguard site behavior.
-  Non-obvious decisions: form submissions are stored locally so the site works
-  on GitHub Pages, and event calendar files are generated in-browser.
-*/
+
 const navToggle = document.querySelector(".nav-toggle");
 const siteNav = document.querySelector(".site-nav");
 
